@@ -1,0 +1,37 @@
+{
+  "name": "lockstep-game-demo",
+  "version": "1.0.0",
+  "description": "A demo for lockstep game mechanics with TypeScript",
+  "main": "dist/app.js",
+  "scripts": {
+    "build": "NODE_ENV=production webpack --mode=production",
+    "start": "webpack serve",
+    "watch": "webpack --watch --mode=development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lockstep",
+    "game",
+    "typescript",
+    "canvas"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/lodash": "^4.17.16",
+    "@types/node": "^20.9.0",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "decimal.js": "^10.5.0",
+    "lodash": "^4.17.21"
+  }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deterministic Lockstep Demo</title>
+  </head>
+  <body>
+    <h1>Deterministic Lockstep Demo</h1>
+
+    <div class="global-settings">
+      <div class="setting-group">
+        <input type="number" id="commandDelay" min="1" max="1000" step="1" />
+        <label for="commandDelay">Command Delay (ticks)</label>
+        <span id="idealDelay" class="ideal-delay"></span>
+      </div>
+      <div class="setting-group">
+        <input type="number" id="tickRate" min="1" max="1000" step="1" />
+        <label for="tickRate">Tick Rate</label>
+      </div>
+      <div class="button-group">
+        <button id="applySettings">Apply tick settings</button>
+        <button id="resetSettings">Reset all settings</button>
+      </div>
+    </div>
+
+    <div class="grid-container">
+      <div class="player-cell">
+        <h2>Player 0</h2>
+        <div class="player-content">
+          <div class="canvas-container">
+            <div class="canvas-wrapper">
+              <canvas id="canvas0" width="300" height="300"></canvas>
+            </div>
+          </div>
+          <div class="settings-container">
+            <h3>Network Settings</h3>
+            <div class="setting-group">
+              <input type="number" id="delayMin0" min="0" max="500" step="10" />
+              <label for="delayMin0">Min Delay (ms)</label>
+            </div>
+            <div class="setting-group">
+              <input type="number" id="delayMax0" min="0" max="500" step="10" />
+              <label for="delayMax0">Max Delay (ms)</label>
+            </div>
+            <div class="setting-group">
+              <input type="number" id="packetLoss0" min="0" max="100" step="1" />
+              <label for="packetLoss0">Packet Loss (%)</label>
+            </div>
+            <div class="setting-group">
+              <input type="checkbox" id="interpolate0" checked />
+              <label for="interpolate0">Enable Interpolation</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="player-cell">
+        <h2>Player 1</h2>
+        <div class="player-content">
+          <div class="canvas-container">
+            <div class="canvas-wrapper">
+              <canvas id="canvas1" width="300" height="300"></canvas>
+            </div>
+          </div>
+          <div class="settings-container">
+            <h3>Network Settings</h3>
+            <div class="setting-group">
+              <input type="number" id="delayMin1" min="0" max="500" step="10" />
+              <label for="delayMin1">Min Delay (ms)</label>
+            </div>
+            <div class="setting-group">
+              <input type="number" id="delayMax1" min="0" max="500" step="10" />
+              <label for="delayMax1">Max Delay (ms)</label>
+            </div>
+            <div class="setting-group">
+              <input type="number" id="packetLoss1" min="0" max="100" step="1" />
+              <label for="packetLoss1">Packet Loss (%)</label>
+            </div>
+            <div class="setting-group">
+              <input type="checkbox" id="interpolate1" checked />
+              <label for="interpolate1">Enable Interpolation</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="player-cell">
+        <h2>Player 2</h2>
+        <div class="player-content">
+          <div class="canvas-container">
+            <div class="canvas-wrapper">
+              <canvas id="canvas2" width="300" height="300"></canvas>
+            </div>
+          </div>
+          <div class="settings-container">
+            <h3>Network Settings</h3>
+            <div class="setting-group">
+              <input type="number" id="delayMin2" min="0" max="500" step="10" />
+              <label for="delayMin2">Min Delay (ms)</label>
+            </div>
+            <div class="setting-group">
+              <input type="number" id="delayMax2" min="0" max="500" step="10" />
+              <label for="delayMax2">Max Delay (ms)</label>
+            </div>
+            <div class="setting-group">
+              <input type="number" id="packetLoss2" min="0" max="100" step="1" />
+              <label for="packetLoss2">Packet Loss (%)</label>
+            </div>
+            <div class="setting-group">
+              <input type="checkbox" id="interpolate2" checked />
+              <label for="interpolate2">Enable Interpolation</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="player-cell">
+        <h2>Player 3</h2>
+        <div class="player-content">
+          <div class="canvas-container">
+            <div class="canvas-wrapper">
+              <canvas id="canvas3" width="300" height="300"></canvas>
+            </div>
+          </div>
+          <div class="settings-container">
+            <h3>Network Settings</h3>
+            <div class="setting-group">
+              <input type="number" id="delayMin3" min="0" max="500" step="10" />
+              <label for="delayMin3">Min Delay (ms)</label>
+            </div>
+            <div class="setting-group">
+              <input type="number" id="delayMax3" min="0" max="500" step="10" />
+              <label for="delayMax3">Max Delay (ms)</label>
+            </div>
+            <div class="setting-group">
+              <input type="number" id="packetLoss3" min="0" max="100" step="1" />
+              <label for="packetLoss3">Packet Loss (%)</label>
+            </div>
+            <div class="setting-group">
+              <input type="checkbox" id="interpolate3" checked />
+              <label for="interpolate3">Enable Interpolation</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

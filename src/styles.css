@@ -1,0 +1,208 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.global-settings {
+  background: #ffffff;
+  border: 1px solid #aaa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.global-settings .setting-group {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.global-settings input {
+  width: 80px;
+  padding: 5px;
+  margin: 0 10px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.global-settings label {
+  margin: 0 5px;
+  font-weight: 500;
+}
+
+.button-group {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.player-cell {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.player-content {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.canvas-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.canvas-wrapper {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  background-color: #f5f5f5;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+}
+
+.settings-container {
+  width: 200px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 20px 0;
+  font-size: 28px;
+}
+
+h2 {
+  margin: 0 0 15px 0;
+  font-size: 20px;
+}
+
+h3 {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.setting-group {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.setting-group input[type='number'] {
+  width: 80px;
+  padding: 6px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.setting-group input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+.setting-group label {
+  font-size: 14px;
+  white-space: nowrap;
+  color: #555;
+}
+
+button {
+  padding: 8px 16px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 5px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+button:active {
+  background: #1c6ea4;
+}
+
+.ideal-delay {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 5px 10px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #495057;
+}
+
+.ideal-delay::before {
+  content: 'Ideal minimum: ';
+  color: #6c757d;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .player-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .settings-container {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .global-settings {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .global-settings .setting-group,
+  .global-settings .button-group {
+    margin: 5px 0;
+  }
+}
